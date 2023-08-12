@@ -16,4 +16,14 @@ public class HappyNumberTest {
         THEN: {}
         Assertions.assertTrue(result);
     }
+
+    @Test
+    public void testMultiDigitBaseCase() {
+        GIVEN: {}
+        int n = 19;
+        WHEN: {}
+        boolean result = IMPL.isHappy(n);
+        THEN: {}
+        Assertions.assertTrue(result);
+    }
 }
