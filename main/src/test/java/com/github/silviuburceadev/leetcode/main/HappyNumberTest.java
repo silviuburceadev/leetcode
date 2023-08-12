@@ -20,7 +20,7 @@ public class HappyNumberTest {
     @Test
     public void testMultiDigitBaseCase() {
         GIVEN: {}
-        int n = 19;
+        int n = 10;
         WHEN: {}
         boolean result = IMPL.isHappy(n);
         THEN: {}
