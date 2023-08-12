@@ -3,9 +3,11 @@ package com.github.silviuburceadev.leetcode.main;
 public class RemoveElement {
     public int removeElement(int[] nums, int val) {
         int different = 0;
-        for (var i = 0; i < nums.length; i++) {
+        for (var i = nums.length - 1; i >= 0; i--) {
             if (nums[i] == val) {
-                System.arraycopy(nums, i + 1, nums, i, nums.length - i);
+                if (different > 0) {
+                    System.arraycopy(nums, i + 1, nums, i, different);
+                }
             } else {
                 different++;
             }
