@@ -34,6 +34,6 @@ public class HappyNumberTest {
         WHEN: {}
         boolean result = IMPL.isHappy(n);
         THEN: {}
-        Assertions.assertTrue(result);
+        Assertions.assertFalse(result);
     }
 }

@@ -1,8 +1,15 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class HappyNumber {
+
+    private static final Set<Integer> CACHE = new HashSet<>();
+
     public boolean isHappy(int n) {
         if (n == 1) return true;
+        if (!CACHE.add(n)) return false;
         return isHappy(squareDigitSum(n));
     }
 
