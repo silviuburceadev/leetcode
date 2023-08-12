@@ -26,4 +26,14 @@ public class HappyNumberTest {
         THEN: {}
         Assertions.assertTrue(result);
     }
+
+    @Test
+    public void testInvalidBaseCase() {
+        GIVEN: {}
+        int n = 2;
+        WHEN: {}
+        boolean result = IMPL.isHappy(n);
+        THEN: {}
+        Assertions.assertTrue(result);
+    }
 }
