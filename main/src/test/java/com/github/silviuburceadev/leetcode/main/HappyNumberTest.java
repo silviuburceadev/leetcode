@@ -28,6 +28,17 @@ public class HappyNumberTest {
     }
 
     @Test
+    public void testMultiDigitRecursive() {
+        GIVEN: {}
+        // 68 -> 100 (36 + 64) -> 1
+        int n = 68;
+        WHEN: {}
+        boolean result = IMPL.isHappy(n);
+        THEN: {}
+        Assertions.assertTrue(result);
+    }
+
+    @Test
     public void testInvalidBaseCase() {
         GIVEN: {}
         int n = 2;
