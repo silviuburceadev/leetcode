@@ -2,7 +2,8 @@ package com.github.silviuburceadev.leetcode.main;
 
 public class HappyNumber {
     public boolean isHappy(int n) {
-        return n == 1 || isHappy(squareDigitSum(n));
+        if (n == 1) return true;
+        return isHappy(squareDigitSum(n));
     }
 
     private int squareDigitSum(int n) {
