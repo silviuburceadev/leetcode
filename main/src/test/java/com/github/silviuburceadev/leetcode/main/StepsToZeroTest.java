@@ -18,8 +18,14 @@ public class StepsToZeroTest {
 
     @Test
     public void checkPowersOfTwo() {
-        assertEquals(2, IMPL.numberOfSteps(2));
         assertEquals(3, IMPL.numberOfSteps(4));
         assertEquals(4, IMPL.numberOfSteps(8));
+    }
+
+    @Test
+    public void checkNonPowersOfTwo() {
+        assertEquals(4, IMPL.numberOfSteps(5));
+        assertEquals(5, IMPL.numberOfSteps(9));
+        assertEquals(6, IMPL.numberOfSteps(14));
     }
 }
