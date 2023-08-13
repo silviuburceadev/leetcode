@@ -12,6 +12,14 @@ public class StepsToZeroTest {
 
     @Test
     public void checkBaseCase() {
+        assertEquals(0, IMPL.numberOfSteps(0));
         assertEquals(1, IMPL.numberOfSteps(1));
+    }
+
+    @Test
+    public void checkPowersOfTwo() {
+        assertEquals(2, IMPL.numberOfSteps(2));
+        assertEquals(3, IMPL.numberOfSteps(4));
+        assertEquals(4, IMPL.numberOfSteps(8));
     }
 }
