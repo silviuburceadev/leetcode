@@ -17,4 +17,14 @@ public class CrawlerLogFolderTest {
         THEN: {}
         assertThat(depth).isEqualTo(1);
     }
+
+    @Test
+    void testBaseCaseCurrentDir() {
+        GIVEN: {}
+        final var input = new String[] { "./" };
+        WHEN: {}
+        final var depth = IMPL.depth(input);
+        THEN: {}
+        assertThat(depth).isEqualTo(0);
+    }
 }
