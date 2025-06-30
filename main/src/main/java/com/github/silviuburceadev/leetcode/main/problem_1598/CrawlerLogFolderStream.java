@@ -1,12 +1,10 @@
-package com.github.silviuburceadev.leetcode.main;
+package com.github.silviuburceadev.leetcode.main.problem_1598;
 
 import java.util.Arrays;
 
-public class CrawlerLogFolder {
+public class CrawlerLogFolderStream implements CrawlerLogFolder {
 
-    public static final String CWD = "./";
-    public static final String PWD = "../";
-
+    @Override
     public int depth(String[] logs) {
         return Arrays.stream(logs)
             .filter(path -> !path.equals(CWD))
