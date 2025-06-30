@@ -1,4 +1,4 @@
-package com.github.silviuburceadev.leetcode.main;
+package com.github.silviuburceadev.leetcode.main.problem_1598;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -7,13 +7,17 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static com.github.silviuburceadev.leetcode.main.CrawlerLogFolder.CWD;
-import static com.github.silviuburceadev.leetcode.main.CrawlerLogFolder.PWD;
+import static com.github.silviuburceadev.leetcode.main.problem_1598.CrawlerLogFolderStream.CWD;
+import static com.github.silviuburceadev.leetcode.main.problem_1598.CrawlerLogFolderStream.PWD;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CrawlerLogFolderTest {
+public abstract class AbstractCrawlerLogFolderTest {
 
-    private static final CrawlerLogFolder IMPL = new CrawlerLogFolder();
+    private final CrawlerLogFolder IMPL;
+
+    public AbstractCrawlerLogFolderTest(CrawlerLogFolder implementation) {
+        IMPL = implementation;
+    }
 
     @Test
     void testBaseCaseOneFolder() {
