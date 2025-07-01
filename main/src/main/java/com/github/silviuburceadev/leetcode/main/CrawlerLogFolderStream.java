@@ -1,4 +1,4 @@
-package com.github.silviuburceadev.leetcode.main.problem_1598;
+package com.github.silviuburceadev.leetcode.main;
 
 import java.util.Arrays;
 
