@@ -1,8 +1,5 @@
 package com.github.silviuburceadev.leetcode.main;
 
-import static java.util.stream.Collectors.groupingBy;
-import static java.util.stream.Collectors.summingInt;
-
 /**
  * Problem 3330
  */
@@ -15,15 +12,15 @@ public class FindOriginalString {
      * @return      the number of potentially correct words
      */
     public int possibleStringCount(String word) {
-        int extraRepeats = word.chars()
-                .boxed()
-                // compute the frequency
-                .collect(groupingBy(c -> c - '0', summingInt(x -> 1)))
-                .values()
-                .stream()
-                // count only extra repeats
-                .mapToInt(count -> count - 1)
-                .sum();
+        int extraRepeats = 0;
+        char[] chars = word.toCharArray();
+
+        for (int i = 1; i < chars.length; i++) {
+            if (chars[i] == chars[i - 1]) {
+                extraRepeats++;
+            }
+        }
+
         return 1 + extraRepeats;
     }
 }
