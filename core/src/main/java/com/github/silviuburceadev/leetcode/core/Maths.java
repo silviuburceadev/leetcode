@@ -2,6 +2,10 @@ package com.github.silviuburceadev.leetcode.core;
 
 public final class Maths {
 
+    private Maths() {
+        // Utility class
+    }
+
     /**
      * Returns the minimum number of bits required to represent number <code>n</code>.
      * <p>

@@ -11,11 +11,21 @@
     <modules>
         <module>core</module>
         <module>main</module>
+        <module>Jacoco-Aggregator</module>
     </modules>
 
     <properties>
+        <!-- Project health -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- SDK -->
         <java.version>21</java.version>
+
+        <!-- Tests -->
+        <junit-bom.version>6.0.0-M1</junit-bom.version>
+        <assertj-bom.version>4.0.0-M1</assertj-bom.version>
+
+        <!-- Jacoco -->
+        <jacoco-maven-plugin.version>0.8.13</jacoco-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -24,14 +34,14 @@
             <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
-                <version>6.0.0-M1</version>
+                <version>${junit-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-bom</artifactId>
-                <version>4.0.0-M1</version>
+                <version>${assertj-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -50,8 +60,28 @@
                         <target>${java.version}</target>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco-maven-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>prepare-agent</id>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
     </build>
 
 </project>

@@ -10,6 +10,17 @@ public class SameTreeTest {
     public static final SameTree IMPL = new SameTree();
 
     @Test
+    void testShallowTree() {
+        GIVEN: {}
+        TreeNode p = new TreeNode(1);
+        TreeNode q = new TreeNode(1);
+        WHEN: {}
+        boolean result = IMPL.isSameTree(p, q);
+        THEN: {}
+        assertThat(result).isTrue();
+    }
+
+    @Test
     void testSameTree() {
         GIVEN: {}
         TreeNode p = new TreeNode(1, new TreeNode(2), new TreeNode(3));
@@ -47,6 +58,19 @@ public class SameTreeTest {
         GIVEN: {}
         TreeNode p = new TreeNode(1, new TreeNode(2), new TreeNode(3));
         TreeNode q = new TreeNode(1, new TreeNode(2), new TreeNode(4));
+        WHEN: {}
+        boolean result = IMPL.isSameTree(p, q);
+        THEN: {}
+        assertThat(result).isFalse();
+    }
+
+    @Test
+    void testNestedTree() {
+        GIVEN: {}
+        TreeNode p = new TreeNode(1,
+                new TreeNode(2, new TreeNode(2), null),
+                new TreeNode(3, new TreeNode(4), new TreeNode(5)));
+        TreeNode q = new TreeNode(1, new TreeNode(2), new TreeNode(3));
         WHEN: {}
         boolean result = IMPL.isSameTree(p, q);
         THEN: {}
