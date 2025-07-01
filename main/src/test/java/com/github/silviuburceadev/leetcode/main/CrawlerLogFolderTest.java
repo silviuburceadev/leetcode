@@ -1,4 +1,4 @@
-package com.github.silviuburceadev.leetcode.main.problem_1598;
+package com.github.silviuburceadev.leetcode.main;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -7,80 +7,76 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static com.github.silviuburceadev.leetcode.main.problem_1598.CrawlerLogFolderStream.CWD;
-import static com.github.silviuburceadev.leetcode.main.problem_1598.CrawlerLogFolderStream.PWD;
+import static com.github.silviuburceadev.leetcode.main.CrawlerLogFolderStream.CWD;
+import static com.github.silviuburceadev.leetcode.main.CrawlerLogFolderStream.PWD;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public abstract class AbstractCrawlerLogFolderTest {
+public interface CrawlerLogFolderTest {
 
-    private final CrawlerLogFolder IMPL;
-
-    public AbstractCrawlerLogFolderTest(CrawlerLogFolder implementation) {
-        IMPL = implementation;
-    }
+    CrawlerLogFolder getImpl();
 
     @Test
-    void testBaseCaseOneFolder() {
+    default void testBaseCaseOneFolder() {
         GIVEN: {}
         final var input = new String[] { "d1/" };
         WHEN: {}
-        final var depth = IMPL.depth(input);
+        final var depth = getImpl().depth(input);
         THEN: {}
         assertThat(depth).isEqualTo(1);
     }
 
     @Test
-    void testBaseCaseCurrentDir() {
+    default void testBaseCaseCurrentDir() {
         GIVEN: {}
         final var input = new String[] { CWD };
         WHEN: {}
-        final var depth = IMPL.depth(input);
+        final var depth = getImpl().depth(input);
         THEN: {}
         assertThat(depth).isEqualTo(0);
     }
 
     @Test
-    void testBaseCaseParentDir() {
+    default void testBaseCaseParentDir() {
         GIVEN: {}
         final var input = new String[] { PWD };
         WHEN: {}
-        final var depth = IMPL.depth(input);
+        final var depth = getImpl().depth(input);
         THEN: {}
         assertThat(depth).isEqualTo(0);
     }
 
     @Test
-    void testMultipleParentDir() {
+    default void testMultipleParentDir() {
         GIVEN: {}
         final var input = new String[] { PWD, PWD };
         WHEN: {}
-        final var depth = IMPL.depth(input);
+        final var depth = getImpl().depth(input);
         THEN: {}
         assertThat(depth).isEqualTo(0);
     }
 
     @Test
-    void testMultipleCurrentDir() {
+    default void testMultipleCurrentDir() {
         GIVEN: {}
         final var input = new String[] { CWD, CWD };
         WHEN: {}
-        final var depth = IMPL.depth(input);
+        final var depth = getImpl().depth(input);
         THEN: {}
         assertThat(depth).isEqualTo(0);
     }
 
     @ParameterizedTest
     @MethodSource("input")
-    void testMultipleLevels(String[] path, int expected) {
+    default void testMultipleLevels(String[] path, int expected) {
         GIVEN: {}
         final var input = path;
         WHEN: {}
-        final var depth = IMPL.depth(input);
+        final var depth = getImpl().depth(input);
         THEN: {}
         assertThat(depth).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> input() {
+    static Stream<Arguments> input() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(new String[] { "d1/","d2/","../","d21/","./" }, 2))
                 .add(Arguments.of(new String[] { "d1/","d2/","./","d3/","../", "d31/" }, 3))
