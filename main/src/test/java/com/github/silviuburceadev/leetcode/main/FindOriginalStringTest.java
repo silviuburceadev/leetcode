@@ -1,5 +1,6 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -29,5 +30,15 @@ public class FindOriginalStringTest {
         final var result = IMPL.possibleStringCount(word);
         THEN: {}
         assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void testWordWithNonConsecutiveRepeatedChars() {
+        GIVEN: {}
+        final var word = "ere";
+        WHEN: {}
+        final var result = IMPL.possibleStringCount(word);
+        THEN: {}
+        assertThat(result).isEqualTo(1);
     }
 }
