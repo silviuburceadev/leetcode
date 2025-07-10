@@ -1,10 +1,12 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
 import com.github.silviuburceadev.leetcode.core.model.TreeNode;
 
 /**
  * Problem 100
  */
+@Problem(100)
 public class SameTree {
 
     public boolean isSameTree(TreeNode p, TreeNode q) {

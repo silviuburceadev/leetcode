@@ -1,8 +1,11 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
 /**
  * Problem 3330
  */
+@Problem(3330)
 public class FindOriginalString {
 
     /**

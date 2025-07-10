@@ -1,8 +1,11 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
 /**
  * Problem 1598
  */
+@Problem(1598)
 public interface CrawlerLogFolder {
 
     String CWD = "./";
