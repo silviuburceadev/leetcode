@@ -1,10 +1,12 @@
 package com.github.silviuburceadev.leetcode.main;
 
 import com.github.silviuburceadev.leetcode.core.Maths;
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
 
 /**
  * Problem 1342
  */
+@Problem(1342)
 public class StepsToZero {
 
     /**

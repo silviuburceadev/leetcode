@@ -1,8 +1,14 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Problem 202
+ */
+@Problem(202)
 public class HappyNumber {
 
     private static final Set<Integer> CACHE = new HashSet<>();
