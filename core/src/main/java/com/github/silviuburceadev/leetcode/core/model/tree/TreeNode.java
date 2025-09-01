@@ -1,4 +1,4 @@
-package com.github.silviuburceadev.leetcode.core.model;
+package com.github.silviuburceadev.leetcode.core.model.tree;
 
 public final class TreeNode {
     public final int val;

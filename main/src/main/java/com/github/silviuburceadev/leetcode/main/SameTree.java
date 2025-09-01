@@ -1,7 +1,7 @@
 package com.github.silviuburceadev.leetcode.main;
 
 import com.github.silviuburceadev.leetcode.core.meta.Problem;
-import com.github.silviuburceadev.leetcode.core.model.TreeNode;
+import com.github.silviuburceadev.leetcode.core.model.tree.TreeNode;
 
 /**
  * Problem 100
