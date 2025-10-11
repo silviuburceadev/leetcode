@@ -1,9 +1,12 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+@Problem(-1)
 public class MaximumProduct {
     public static final long MAX = 100_000L;
 

@@ -1,9 +1,12 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
 import java.util.List;
 import java.util.TreeSet;
 import java.util.stream.IntStream;
 
+@Problem(3731)
 public class MissingElements {
 
     public List<Integer> findMissingElements(int[] nums) {

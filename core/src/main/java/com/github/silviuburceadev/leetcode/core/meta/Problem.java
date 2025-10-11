@@ -1,9 +1,10 @@
 package com.github.silviuburceadev.leetcode.core.meta;
 
-import java.lang.annotation.Repeatable;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
-@Repeatable(Problems.class)
+@Retention(RetentionPolicy.RUNTIME)
 public @interface Problem {
 
-    int value();
+    int[] value();
 }

@@ -1,7 +1,10 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
 import java.util.stream.IntStream;
 
+@Problem(6)
 public class ZigZagConversion {
 
     /**

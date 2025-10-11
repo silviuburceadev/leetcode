@@ -1,5 +1,8 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
+@Problem(3707)
 public class EqualScoreString {
 
     public boolean scoreBalance(String input) {

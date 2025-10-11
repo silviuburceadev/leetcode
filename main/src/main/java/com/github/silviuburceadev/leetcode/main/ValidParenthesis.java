@@ -1,8 +1,11 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
 import java.util.Map;
 import java.util.Stack;
 
+@Problem(20)
 public class ValidParenthesis {
 
     private static final Map<Character, Character> PARENTHESIS =

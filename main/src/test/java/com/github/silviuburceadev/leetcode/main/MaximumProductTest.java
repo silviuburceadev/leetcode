@@ -22,7 +22,7 @@ class MaximumProductTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> maxProductSource() {
+    private static Stream<Arguments> maxProductSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(new int[] { -5, 7, 0 }, 3_500_000L))
                 .add(Arguments.of(new int[] { -4,-2,-1,-3 }, 1_200_000L))

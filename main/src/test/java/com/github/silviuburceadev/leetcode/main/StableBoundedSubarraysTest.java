@@ -22,7 +22,7 @@ class StableBoundedSubarraysTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> countStableSubarraysSource() {
+    private static Stream<Arguments> countStableSubarraysSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(new int[] { 9, 3, 3, 3, 9 }, 2))
                 .add(Arguments.of(new int[] { 1, 2, 3, 4, 5 }, 0))
