@@ -1,5 +1,8 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
+@Problem(3723)
 public class MaxNumberSquareDigits {
 
     public String maxSumOfSquares(int num, int sum) {

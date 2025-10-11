@@ -1,5 +1,8 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
+@Problem(2100)
 public class SmoothDescent {
 
     public long getDescentPeriods(int[] prices) {

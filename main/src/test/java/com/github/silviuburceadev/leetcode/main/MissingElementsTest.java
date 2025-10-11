@@ -23,7 +23,7 @@ class MissingElementsTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> findMissingElementsSource() {
+    private static Stream<Arguments> findMissingElementsSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(new int[] { 1, 2, 4, 5 }, List.of(3)))
                 .add(Arguments.of(new int[] { 7, 8, 6, 9 }, List.of()))

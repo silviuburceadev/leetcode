@@ -2,6 +2,7 @@ package com.github.silviuburceadev.leetcode.main;
 
 import com.github.silviuburceadev.leetcode.core.meta.Problem;
 
+@Problem({ 1518, 3100 })
 public class WaterBottles {
 
     @Problem(1518)

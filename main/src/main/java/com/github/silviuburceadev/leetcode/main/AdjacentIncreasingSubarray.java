@@ -6,8 +6,7 @@ import com.github.silviuburceadev.leetcode.core.model.Range;
 import java.util.ArrayList;
 import java.util.List;
 
-@Problem(3349)
-@Problem(3350)
+@Problem({ 3349, 3350 })
 public class AdjacentIncreasingSubarray {
 
     @Problem(3349)

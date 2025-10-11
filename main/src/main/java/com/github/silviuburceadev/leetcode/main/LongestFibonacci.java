@@ -1,5 +1,8 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
+@Problem(3708)
 public class LongestFibonacci {
 
     public int longestSubarray(int[] nums) {

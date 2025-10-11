@@ -1,7 +1,10 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
 import java.util.Arrays;
 
+@Problem(3718)
 public class SmallestMissingMultiple {
 
     public int missingMultiple(int[] nums, int k) {

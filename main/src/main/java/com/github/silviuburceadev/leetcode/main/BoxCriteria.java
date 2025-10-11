@@ -1,5 +1,8 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
+@Problem(2525)
 public class BoxCriteria {
     private static final long LARGE = 1_000_000_000;
     private static final int WIDE = 10_000;

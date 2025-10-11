@@ -1,5 +1,8 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
+@Problem(3724)
 public class MinimumOperations {
 
     public long minOperations(int[] nums1, int[] nums2) {

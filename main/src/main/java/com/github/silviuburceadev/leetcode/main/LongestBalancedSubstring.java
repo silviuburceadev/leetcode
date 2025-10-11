@@ -1,7 +1,10 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
 import java.util.HashSet;
 
+@Problem(3713)
 public class LongestBalancedSubstring {
 
     public int longestBalanced(String s) {

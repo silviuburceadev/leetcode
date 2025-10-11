@@ -1,14 +1,14 @@
 package com.github.silviuburceadev.leetcode.main;
 
 import com.github.silviuburceadev.leetcode.core.meta.Problem;
-import com.github.silviuburceadev.leetcode.core.meta.TimeLimitExceeded;
+import com.github.silviuburceadev.leetcode.core.meta.Revisit;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 @Problem(3728)
-@TimeLimitExceeded
+@Revisit("TLE")
 public class StableBoundedSubarrays {
 
     public long countStableSubarrays(int[] capacity) {
@@ -36,5 +36,9 @@ public class StableBoundedSubarrays {
         }
 
         return total;
+    }
+
+    static void main() {
+
     }
 }

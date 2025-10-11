@@ -1,10 +1,13 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.stream.Collectors;
 
+@Problem(3727)
 public class MaximumAlternatingSquares {
 
     public long maxAlternatingSum(int[] nums) {
