@@ -22,7 +22,7 @@ class LargestNumberTwiceTest {
     }
 
     @Test
-    void checkLargestIsNotLargeEnough() {
+    void checkLargestIsNotDominant() {
         GIVEN: {}
         var input = new int[] { 1, 2, 3, 4 };
 
@@ -34,7 +34,7 @@ class LargestNumberTwiceTest {
     }
 
     @Test
-    void checkLargestIsLargeEnough() {
+    void checkLargestIsDominant() {
         GIVEN: {}
         var input = new int[] { 3, 6, 1, 0 };
 
@@ -43,5 +43,17 @@ class LargestNumberTwiceTest {
 
         THEN: {}
         assertThat(actual).isEqualTo(1);
+    }
+
+    @Test
+    void checkLargestIsDominantInFirstPosition() {
+        GIVEN: {}
+        var input = new int[] { 1, 0 };
+
+        WHEN: {}
+        var actual = IMPL.dominantIndex(input);
+
+        THEN: {}
+        assertThat(actual).isEqualTo(0);
     }
 }
