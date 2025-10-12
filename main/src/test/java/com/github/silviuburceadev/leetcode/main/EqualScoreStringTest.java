@@ -10,26 +10,38 @@ class EqualScoreStringTest {
 
     @Test
     void equalSplit() {
-        GIVEN: {}
+        // given
         var input = "adbc";
 
-        WHEN: {}
+        // when
         var actual = IMPL.scoreBalance(input);
 
-        THEN: {}
+        // then
         assertThat(actual).isTrue();
     }
 
 
     @Test
-    void noSplit() {
-        GIVEN: {}
+    void unevenTotal() {
+        // given
         var input = "bace";
 
-        WHEN: {}
+        // when
         var actual = IMPL.scoreBalance(input);
 
-        THEN: {}
+        // then
+        assertThat(actual).isFalse();
+    }
+
+    @Test
+    void notEqualSplit() {
+        // given
+        var input = "bacd";
+
+        // when
+        var actual = IMPL.scoreBalance(input);
+
+        // then
         assertThat(actual).isFalse();
     }
 }
