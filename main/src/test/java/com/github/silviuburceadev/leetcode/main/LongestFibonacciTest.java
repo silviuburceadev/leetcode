@@ -12,23 +12,23 @@ class LongestFibonacciTest {
 
     private static final LongestFibonacci IMPL = new LongestFibonacci();
 
-    public static Stream<Arguments> testCases() {
-        return Stream.<Arguments>builder()
-                .add(Arguments.of(new int[] { 1,1,1,1,2,3,5,1 }, 5))
-                .add(Arguments.of(new int[] { 5,2,7,9,16 }, 5))
-                .add(Arguments.of(new int[] { 1000000000,1000000000,1000000000 }, 2))
-                .add(Arguments.of(new int[] { 1, 1, 3, 2 }, 2))
-                .build();
-    }
-
     @ParameterizedTest
-    @MethodSource("testCases")
-    void baseCases(int[] input, int expected) {
-        WHEN: {}
+    @MethodSource("testCasesSource")
+    void testCases(int[] input, int expected) {
+        // when
         var actual = IMPL.longestSubarray(input);
 
-        THEN: {}
+        // then
         assertThat(actual).isEqualTo(expected);
     }
 
+    private static Stream<Arguments> testCasesSource() {
+        return Stream.<Arguments>builder()
+                .add(Arguments.of(new int[] { 1, 1, 1, 1, 2, 3, 5, 1 }, 5))
+                .add(Arguments.of(new int[] { 5, 2, 7, 9, 16 }, 5))
+                .add(Arguments.of(new int[] { 1000000000, 1000000000, 1000000000 }, 2))
+                .add(Arguments.of(new int[] { 1, 1, 3, 2 }, 2))
+                .add(Arguments.of(new int[] { 1 }, 1))
+                .build();
+    }
 }
