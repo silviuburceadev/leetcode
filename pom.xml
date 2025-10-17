@@ -18,6 +18,13 @@
     <properties>
         <!-- Project health -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Maven -->
+        <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
+        <maven-install-plugin.version>3.1.4</maven-install-plugin.version>
+        <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
+        <!-- Jacoco -->
+        <jacoco-maven-plugin.version>0.8.14</jacoco-maven-plugin.version>
+
         <!-- SDK -->
         <java.version>25</java.version>
 
@@ -25,18 +32,13 @@
         <junit-bom.version>6.0.0</junit-bom.version>
         <assertj-bom.version>4.0.0-M1</assertj-bom.version>
 
-        <!-- Jacoco -->
-        <jacoco-maven-plugin.version>0.8.13</jacoco-maven-plugin.version>
-
-        <!-- Maven -->
-        <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
-        <maven-install-plugin.version>3.1.4</maven-install-plugin.version>
-        <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
+        <jspecify.version>1.0.0</jspecify.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <!-- BOM Imports - start -->
+            <!-- Test -->
             <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
@@ -52,6 +54,12 @@
                 <scope>import</scope>
             </dependency>
             <!-- BOM Imports - end -->
+
+            <dependency>
+                <groupId>org.jspecify</groupId>
+                <artifactId>jspecify</artifactId>
+                <version>${jspecify.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
