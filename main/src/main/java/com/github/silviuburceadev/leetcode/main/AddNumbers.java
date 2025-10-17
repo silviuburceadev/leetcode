@@ -1,7 +1,9 @@
 package com.github.silviuburceadev.leetcode.main;
 
+import com.github.silviuburceadev.leetcode.core.meta.Problem;
 import com.github.silviuburceadev.leetcode.core.model.ListNode;
 
+@Problem(2)
 public class AddNumbers {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
