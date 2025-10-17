@@ -10,6 +10,7 @@
     <artifactId>main</artifactId>
 
     <dependencies>
+        <!-- Self -->
         <dependency>
             <groupId>com.github.silviuburceadev.leetcode</groupId>
             <artifactId>core</artifactId>
