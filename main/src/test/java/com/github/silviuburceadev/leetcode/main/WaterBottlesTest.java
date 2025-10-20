@@ -22,10 +22,27 @@ class WaterBottlesTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> testNumWaterBottlesSource() {
+    private static Stream<Arguments> testNumWaterBottlesSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(9, 3, 13))
                 .add(Arguments.of(15, 4, 19))
+                .build();
+    }
+
+    @ParameterizedTest
+    @MethodSource("testMaxBottlesDrunkSource")
+    void testMaxBottlesDrunk(int numBottles, int numExchange, int expected) {
+        // given
+        var actual = IMPL.maxBottlesDrunk(numBottles, numExchange);
+
+        // then
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    private static Stream<Arguments> testMaxBottlesDrunkSource() {
+        return Stream.<Arguments>builder()
+                .add(Arguments.of(13, 6, 15))
+                .add(Arguments.of(10, 3, 13))
                 .build();
     }
 }
