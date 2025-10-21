@@ -7,9 +7,10 @@ public class BoxCriteria {
 
     public String categorizeBox(int length, int width, int height, int mass) {
         var isLarge = isLarge(length, width, height);
-        var isWide = length >= WIDE || width >= WIDE || height >= WIDE;
+        var isWide = isWide(length, width, height);
         var isBulky = isLarge || isWide;
         var isHeavy = mass >= HEAVY;
+
         if (isBulky && isHeavy) return "Both";
         if (isBulky) return "Bulky";
         if (isHeavy) return "Heavy";
@@ -18,5 +19,9 @@ public class BoxCriteria {
 
     private boolean isLarge(int length, int width, int height) {
         return (long) length * width * height >= LARGE;
+    }
+
+    private boolean isWide(int length, int width, int height) {
+        return length >= WIDE || width >= WIDE || height >= WIDE;
     }
 }
