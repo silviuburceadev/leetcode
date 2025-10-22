@@ -13,7 +13,7 @@ public class FindOriginalStringTest {
 
     private static final FindOriginalString IMPL = new FindOriginalString();
 
-    public static Stream<Arguments> input() {
+    private static Stream<Arguments> input() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of("abbcccc", 5))
                 .add(Arguments.of("abcd", 1))

@@ -22,7 +22,7 @@ class StringToIntegerTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> testMyAtoiSource() {
+    private static Stream<Arguments> testMyAtoiSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of("42", 42))
                 .add(Arguments.of(" -042", -42))
