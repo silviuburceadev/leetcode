@@ -22,7 +22,7 @@ class BoxCriteriaTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> testCategorizeBoxSource() {
+    private static Stream<Arguments> testCategorizeBoxSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(1000, 35, 700, 300, "Heavy"))
                 .add(Arguments.of(200, 50, 800, 50, "Neither"))

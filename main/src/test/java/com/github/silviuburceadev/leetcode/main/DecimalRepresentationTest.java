@@ -12,7 +12,7 @@ class DecimalRepresentationTest {
 
     private static final DecimalRepresentation IMPL = new DecimalRepresentation();
 
-    public static Stream<Arguments> input() {
+    private static Stream<Arguments> input() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(537, new int[] { 500, 30, 7 }))
                 .add(Arguments.of(102, new int[] { 100, 2 }))

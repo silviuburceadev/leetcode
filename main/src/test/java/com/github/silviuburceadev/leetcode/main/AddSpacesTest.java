@@ -22,7 +22,7 @@ class AddSpacesTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> testAddSpacesSource() {
+    private static Stream<Arguments> testAddSpacesSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of("EnjoyYourCoffee", new int[] { 5, 9 }, "Enjoy Your Coffee"))
                 .add(Arguments.of("LeetcodeHelpsMeLearn", new int[] { 8, 13, 15 }, "Leetcode Helps Me Learn"))

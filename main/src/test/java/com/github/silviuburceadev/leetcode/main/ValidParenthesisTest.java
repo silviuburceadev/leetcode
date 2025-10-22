@@ -23,7 +23,7 @@ class ValidParenthesisTest {
 
     }
 
-    public static Stream<Arguments> testIsValidSource() {
+    private static Stream<Arguments> testIsValidSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of("()", true))
                 .add(Arguments.of("()[]{}", true))

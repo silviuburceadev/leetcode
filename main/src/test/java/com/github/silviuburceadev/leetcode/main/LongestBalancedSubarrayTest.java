@@ -20,7 +20,7 @@ class LongestBalancedSubarrayTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> testLongestBalancedSource() {
+    private static Stream<Arguments> testLongestBalancedSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(new int[] { 2, 5, 4, 3 }, 4))
                 .add(Arguments.of(new int[] { 3, 2, 2, 5, 4 }, 5))
