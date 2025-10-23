@@ -2,6 +2,8 @@ package com.github.silviuburceadev.leetcode.main;
 
 import com.github.silviuburceadev.leetcode.core.meta.Problem;
 
+import static com.github.silviuburceadev.leetcode.core.Strings.isPalindrome;
+
 @Problem(2108)
 public class FirstPalindrome {
 
@@ -21,14 +23,5 @@ public class FirstPalindrome {
         }
 
         return "";
-    }
-
-    private boolean isPalindrome(String word) {
-        var chars = word.toCharArray();
-        for (var i = 0; i < chars.length / 2; i++) {
-            if (chars[i] != chars[chars.length - 1 - i]) return false;
-        }
-
-        return true;
     }
 }
