@@ -13,8 +13,8 @@ class ValidPalindromeTest {
     private static final ValidPalindrome IMPL = new ValidPalindrome();
 
     @ParameterizedTest
-    @MethodSource("firstPalindromeSource")
-    void firstPalindrome(String word, boolean expected) {
+    @MethodSource("testIsPalindromeSource")
+    void testIsPalindrome(String word, boolean expected) {
         // when
         var actual = IMPL.isPalindrome(word);
 
@@ -22,7 +22,7 @@ class ValidPalindromeTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    private static Stream<Arguments> firstPalindromeSource() {
+    private static Stream<Arguments> testIsPalindromeSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of("A man, a plan, a canal: Panama", true))
                 .add(Arguments.of("race a car", false))
@@ -33,4 +33,21 @@ class ValidPalindromeTest {
                 .build();
     }
 
+    @ParameterizedTest
+    @MethodSource("testValidPalindromeSource")
+    void testValidPalindrome(String word, boolean expected) {
+        // when
+        var actual = IMPL.validPalindrome(word);
+
+        // then
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    public static Stream<Arguments> testValidPalindromeSource() {
+        return Stream.<Arguments>builder()
+                .add(Arguments.of("aba", true))
+                .add(Arguments.of("abca", true))
+                .add(Arguments.of("abc", false))
+                .build();
+    }
 }

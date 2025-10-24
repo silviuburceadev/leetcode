@@ -7,9 +7,14 @@ public final class Strings {
     }
 
     public static boolean isPalindrome(String word) {
+        return isPalindrome(word, 0, word.length() - 1);
+    }
+
+    public static boolean isPalindrome(String word, int start, int end) {
         var chars = word.toCharArray();
-        for (var i = 0; i < chars.length / 2; i++) {
-            if (chars[i] != chars[chars.length - 1 - i]) return false;
+
+        for (int left = start, right = end; left <= right; left++, right--) {
+            if (chars[left] != chars[right]) return false;
         }
 
         return true;
