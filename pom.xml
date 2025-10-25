@@ -9,20 +9,20 @@
     <artifactId>parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <subprojects>
-        <subproject>core</subproject>
-        <subproject>main</subproject>
-        <subproject>Jacoco-Aggregator</subproject>
-    </subprojects>
-
     <properties>
         <!-- Project health -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- Maven -->
-        <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
-        <maven-install-plugin.version>3.1.4</maven-install-plugin.version>
-        <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
-        <!-- Jacoco -->
+
+        <!-- Core Maven Plugins -->
+        <maven-clean-plugin.version>4.0.0-beta-2</maven-clean-plugin.version>
+        <!-- TODO find out why resources 4.0.0-beta-1 fails -->
+        <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
+        <maven-compiler-plugin.version>4.0.0-beta-3</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
+        <!-- TODO find out why JAR 4.0.0-beta-1 fails -->
+        <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
+        <maven-install-plugin.version>4.0.0-beta-2</maven-install-plugin.version>
+        <!-- Extra Maven Plugins -->
         <jacoco-maven-plugin.version>0.8.14</jacoco-maven-plugin.version>
 
         <!-- SDK -->
@@ -34,6 +34,12 @@
 
         <jspecify.version>1.0.0</jspecify.version>
     </properties>
+
+    <subprojects>
+        <subproject>core</subproject>
+        <subproject>main</subproject>
+        <subproject>Jacoco-Aggregator</subproject>
+    </subprojects>
 
     <dependencyManagement>
         <dependencies>
@@ -73,8 +79,8 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-install-plugin</artifactId>
-                    <version>${maven-install-plugin.version}</version>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven-resources-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -84,6 +90,21 @@
                         <source>${java.version}</source>
                         <target>${java.version}</target>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${maven-install-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.jacoco</groupId>
