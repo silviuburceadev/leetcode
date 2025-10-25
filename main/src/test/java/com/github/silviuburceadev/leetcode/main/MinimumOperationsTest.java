@@ -22,7 +22,7 @@ class MinimumOperationsTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> testMinOperationsSource() {
+    private static Stream<Arguments> testMinOperationsSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(new int[] { 2, 8 }, new int[] { 1, 7, 3 }, 4))
                 .add(Arguments.of(new int[] { 1, 3, 6 }, new int[] { 2, 4, 5, 3 }, 4))
