@@ -43,7 +43,7 @@ class ValidPalindromeTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> testValidPalindromeSource() {
+    private static Stream<Arguments> testValidPalindromeSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of("aba", true))
                 .add(Arguments.of("abca", true))

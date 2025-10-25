@@ -22,7 +22,7 @@ class ZeroFilledSubarraysTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> testZeroFilledSubarraySource() {
+    private static Stream<Arguments> testZeroFilledSubarraySource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(new int[] { 1, 3, 0, 0, 2, 0, 0, 4 }, 6))
                 .add(Arguments.of(new int[] { 0, 0, 0, 2, 0, 0 }, 9))

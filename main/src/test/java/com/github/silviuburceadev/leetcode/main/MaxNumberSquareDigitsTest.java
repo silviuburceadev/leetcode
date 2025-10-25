@@ -8,24 +8,25 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class MaximumRotationFunctionTest {
+class MaxNumberSquareDigitsTest {
 
-    private static final MaximumRotationFunction IMPL = new MaximumRotationFunction();
+    private static final MaxNumberSquareDigits IMPL = new MaxNumberSquareDigits();
 
     @ParameterizedTest
-    @MethodSource("testMaxRotateFunctionSource")
-    void testMaxRotateFunction(int[] nums, int expected) {
+    @MethodSource("testMaxSumOfSquaresTest")
+    void testMaxSumOfSquares(int num, int sum, String expected) {
         // when
-        var actual = IMPL.maxRotateFunction(nums);
+        var actual = IMPL.maxSumOfSquares(num, sum);
 
         // then
         assertThat(actual).isEqualTo(expected);
     }
 
-    private static Stream<Arguments> testMaxRotateFunctionSource() {
+    private static Stream<Arguments> testMaxSumOfSquaresTest() {
         return Stream.<Arguments>builder()
-                .add(Arguments.of(new int[] { 4, 3, 2, 6 }, 26))
-                .add(Arguments.of(new int[] { 100 }, 0))
+                .add(Arguments.of(2, 3, "30"))
+                .add(Arguments.of(2, 17, "98"))
+                .add(Arguments.of(1, 10, ""))
                 .build();
     }
 }

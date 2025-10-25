@@ -22,7 +22,7 @@ class LexicographicallySmallestTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> testLexSmallestSource() {
+    private static Stream<Arguments> testLexSmallestSource() {
         return Stream.<Arguments>builder()
                 // rotate left, 2
                 .add(Arguments.of("dcab", "acdb"))
