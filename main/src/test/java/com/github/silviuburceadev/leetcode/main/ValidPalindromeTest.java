@@ -48,6 +48,7 @@ class ValidPalindromeTest {
                 .add(Arguments.of("aba", true))
                 .add(Arguments.of("abca", true))
                 .add(Arguments.of("abc", false))
+                .add(Arguments.of("caba", true))
                 .build();
     }
 }
