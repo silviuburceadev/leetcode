@@ -8,6 +8,7 @@
     </parent>
 
     <artifactId>Jacoco-Aggregator</artifactId>
+    <packaging>pom</packaging>
 
     <dependencies>
         <dependency>
