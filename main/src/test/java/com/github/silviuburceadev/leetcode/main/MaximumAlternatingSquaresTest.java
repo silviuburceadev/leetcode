@@ -22,10 +22,11 @@ class MaximumAlternatingSquaresTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> testMaxAlternatingSumSource() {
+    private static Stream<Arguments> testMaxAlternatingSumSource() {
         return Stream.<Arguments>builder()
-                .add(Arguments.of(new int[] { 1, 2, 3 }, 12))
-                .add(Arguments.of(new int[] { 1, -1, 2, -2, 3, -3 }, 16))
+                .add(Arguments.of(new int[] { 1, 2, 3 }, 12L))
+                .add(Arguments.of(new int[] { 1, -1, 2, -2, 3, -3 }, 16L))
+                .add(Arguments.of(new int[] { 1, -1, 2, -2, 3, -3, 4 }, 32L))
                 .build();
     }
 }
