@@ -22,7 +22,7 @@ class RemoveZerosTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    public static Stream<Arguments> testRemoveZeroesSource() {
+    private static Stream<Arguments> testRemoveZeroesSource() {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(1020030L, 123L))
                 .add(Arguments.of(1L, 1L))

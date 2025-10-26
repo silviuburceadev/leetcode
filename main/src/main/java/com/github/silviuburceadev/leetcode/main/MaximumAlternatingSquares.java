@@ -11,19 +11,15 @@ public class MaximumAlternatingSquares {
         var sorted = Arrays.stream(nums).boxed()
                 .sorted(Comparator.comparingInt(Math::abs))
                 .collect(Collectors.toCollection(ArrayList::new));
-        var sum = 0L;
-        var fromEnd = true;
 
-        while (!sorted.isEmpty()) {
-            if (fromEnd) {
-                long n = sorted.removeLast();
-                sum += n * n;
-            } else {
-                long n = sorted.removeFirst();
-                sum -= n * n;
-            }
-            fromEnd = !fromEnd;
+        var sum = 0L;
+        var half = sorted.size() / 2;
+        for (var i = 0; i < half; i++) {
+            sum -= (long) sorted.get(i) * sorted.get(i);
+            sum += (long) sorted.get(i + half) * sorted.get(i + half);
         }
+
+        if (sorted.size() % 2 == 1) sum += (long) sorted.getLast() * sorted.getLast();
 
         return sum;
     }
