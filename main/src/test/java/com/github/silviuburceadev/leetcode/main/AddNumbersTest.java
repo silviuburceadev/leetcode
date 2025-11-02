@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import static com.github.silviuburceadev.leetcode.core.model.ListNode.fromDigits;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class AddNumbersTest {
@@ -20,17 +21,18 @@ class AddNumbersTest {
         var actual = IMPL.addTwoNumbers(l1, l2);
 
         // then
-        assertThat(actual.toString()).isEqualTo(expected.toString());
+        assertThat(actual).isEqualTo(expected);
     }
 
     private static Stream<Arguments> testAddTwoNumbersSource() {
         return Stream.<Arguments>builder()
-                .add(Arguments.of(ListNode.fromNumber(342), ListNode.fromNumber(465), ListNode.fromNumber(807)))
-                .add(Arguments.of(ListNode.fromNumber(0), ListNode.fromNumber(0), ListNode.fromNumber(0)))
-                .add(Arguments.of(ListNode.fromNumber(99), ListNode.fromNumber(12), ListNode.fromNumber(111)))
-                .add(Arguments.of(ListNode.fromNumber(9_999_999), ListNode.fromNumber(9_999), ListNode.fromNumber(10_009_998)))
-                .add(Arguments.of(ListNode.fromNumber(9_999), ListNode.fromNumber(9_999_999), ListNode.fromNumber(10_009_998)))
+                .add(Arguments.of(fromDigits(342), fromDigits(465), fromDigits(807)))
+                .add(Arguments.of(fromDigits(0), fromDigits(0), fromDigits(0)))
+                .add(Arguments.of(fromDigits(99), fromDigits(12), fromDigits(111)))
+                .add(Arguments.of(fromDigits(9_999_999), fromDigits(9_999), fromDigits(10_009_998)))
+                .add(Arguments.of(fromDigits(9_999), fromDigits(9_999_999), fromDigits(10_009_998)))
+                .add(Arguments.of(fromDigits(9_999), null, fromDigits(9_999)))
+                .add(Arguments.of(null, fromDigits(9_999), fromDigits(9_999)))
                 .build();
     }
-
 }

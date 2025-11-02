@@ -37,8 +37,4 @@ public class StableBoundedSubarrays {
 
         return total;
     }
-
-    static void main() {
-
-    }
 }
