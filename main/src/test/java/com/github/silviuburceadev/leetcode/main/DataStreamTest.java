@@ -32,6 +32,7 @@ class DataStreamTest {
                     .add(Arguments.of(4, false))
                     .add(Arguments.of(4, false))
                     .add(Arguments.of(4, true))
+                    .add(Arguments.of(4, true))
                     .add(Arguments.of(3, false))
                     .build();
         }
