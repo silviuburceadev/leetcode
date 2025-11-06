@@ -27,6 +27,8 @@ interface RotateArrayTest {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 3, new int[] { 5, 6, 7, 1, 2, 3, 4 }))
                 .add(Arguments.of(new int[] { -1, -100, 3, 99 }, 2, new int[] { 3, 99, -1, -100 }))
+                .add(Arguments.of(new int[] { -1 }, 100, new int[] { -1 }))
+                .add(Arguments.of(new int[] { -1, -2 }, 100, new int[] { -1, -2 }))
                 .build();
     }
 }
