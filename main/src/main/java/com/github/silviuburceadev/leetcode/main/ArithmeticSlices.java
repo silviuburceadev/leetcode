@@ -10,13 +10,11 @@ public class ArithmeticSlices {
 
         var result = 0;
         var streak = 2;
-        var ratio = nums[1] - nums[0];
         for (var i = 2; i < nums.length; i++) {
-            if (nums[i] - nums[i - 1] == ratio) streak++;
+            if (nums[i] - nums[i - 1] == nums[i - 1] - nums[i - 2]) streak++;
             else {
                 result += slices(streak);
                 streak = 2;
-                ratio = nums[i] - nums[i - 1];
             }
         }
 
