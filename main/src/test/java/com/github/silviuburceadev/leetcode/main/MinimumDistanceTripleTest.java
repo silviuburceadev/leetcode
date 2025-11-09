@@ -27,6 +27,7 @@ class MinimumDistanceTripleTest {
                 .add(Arguments.of(new int[] { 1, 2, 1, 1, 3 }, 6))
                 .add(Arguments.of(new int[] { 1, 1, 2, 3, 2, 1, 2 }, 8))
                 .add(Arguments.of(new int[] { 1, 1, 1, 1 }, 4))
+                .add(Arguments.of(new int[] { 1, 1, 2, 2 }, -1))
                 .build();
     }
 }
