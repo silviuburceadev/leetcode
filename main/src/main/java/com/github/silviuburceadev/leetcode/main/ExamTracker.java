@@ -6,11 +6,11 @@ import com.github.silviuburceadev.leetcode.core.meta.Revisit;
 import java.util.ArrayList;
 import java.util.List;
 
-record ExamResult(int time, int score) {}
-
 @Problem(3709)
 @Revisit("TLE")
 public final class ExamTracker {
+
+    record ExamResult(int time, int score) {}
 
     private final List<ExamResult> examResults = new ArrayList<>();
 
