@@ -1,10 +1,18 @@
 package com.github.silviuburceadev.leetcode.core;
 
+import java.util.Arrays;
+
 public final class MatrixUtils {
 
     private MatrixUtils() {
         // Utility class
     }
+
+    public static void rotate(int[][] matrix) {
+        MatrixUtils.transpose(matrix);
+        MatrixUtils.horizontalFlip(matrix);
+    }
+
 
     public static void transpose(int[][] matrix) {
         for (var row : matrix) {
@@ -29,5 +37,14 @@ public final class MatrixUtils {
         for (var row : matrix) {
             ArrayUtils.reverse(row);
         }
+    }
+
+    public static boolean equals(int[][] left, int[][] right) {
+        if (left.length != right.length) return false;
+        for (var i = 0; i < left.length; i++) {
+            if (!Arrays.equals(left[i], right[i])) return false;
+        }
+
+        return true;
     }
 }
