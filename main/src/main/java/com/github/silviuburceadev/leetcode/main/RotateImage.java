@@ -7,7 +7,6 @@ import com.github.silviuburceadev.leetcode.core.meta.Problem;
 public class RotateImage {
 
     public void rotate(int[][] matrix) {
-        MatrixUtils.transpose(matrix);
-        MatrixUtils.horizontalFlip(matrix);
+        MatrixUtils.rotate(matrix);
     }
 }
