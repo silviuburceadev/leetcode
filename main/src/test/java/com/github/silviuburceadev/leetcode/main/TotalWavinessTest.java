@@ -27,6 +27,7 @@ class TotalWavinessTest {
                 .add(Arguments.of(120, 130, 3))
                 .add(Arguments.of(198, 202, 3))
                 .add(Arguments.of(4848, 4848, 2))
+                .add(Arguments.of(48, 48, 0))
                 .build();
     }
 }
