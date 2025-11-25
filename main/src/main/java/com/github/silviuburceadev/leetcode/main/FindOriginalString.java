@@ -15,7 +15,7 @@ public class FindOriginalString {
      * @return      the number of potentially correct words
      */
     public int possibleStringCount(String word) {
-        int extraRepeats = 0;
+        int extraRepeats = 1;
         char[] chars = word.toCharArray();
 
         for (int i = 1; i < chars.length; i++) {
@@ -24,6 +24,6 @@ public class FindOriginalString {
             }
         }
 
-        return 1 + extraRepeats;
+        return extraRepeats;
     }
 }
