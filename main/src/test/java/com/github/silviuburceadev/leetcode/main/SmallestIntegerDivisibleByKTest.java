@@ -26,6 +26,7 @@ class SmallestIntegerDivisibleByKTest {
         return Stream.<Arguments>builder()
                 .add(Arguments.of(1, 1))
                 .add(Arguments.of(2, -1))
+                .add(Arguments.of(5, -1))
                 .add(Arguments.of(3, 3))
                 .add(Arguments.of(7, 6))
                 .add(Arguments.of(17, 16))
